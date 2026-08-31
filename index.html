@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Uncharted Garden Paths – Cultivating Curiosity</title>
+  <meta name="description" content="An independent gardening publication exploring forgotten heirloom varieties, soil wisdom, and the quiet art of tending living things.">
+  <!-- Google Fonts: refined serif & humanist sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+  <style>
+    /* ----- RESET & BASE ----- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #fbf7f0;
+      color: #2b2b28;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; display: block; }
+    ul, ol { padding-left: 1.2rem; }
+
+    /* ----- TYPOGRAPHY (premium, garden-inspired) ----- */
+    h1, h2, h3, h4, .logo, .nav-primary a, .article-title {
+      font-family: 'EB Garamond', serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); line-height: 1.1; }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2; }
+    h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); line-height: 1.3; }
+    h4 { font-size: clamp(1.1rem, 1.8vw, 1.4rem); }
+    .body-large { font-size: 1.2rem; font-weight: 300; line-height: 1.7; }
+    .meta, .caption, .small-print { font-size: 0.875rem; color: #5f5e5a; letter-spacing: 0.02em; }
+    .tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; background: #e8e3da; padding: 0.2rem 0.8rem; border-radius: 40px; display: inline-block; }
+
+    /* ----- COLOR (earthy, muted, high readability) ----- */
+    :root {
+      --clr-primary: #2f4f3a;    /* deep forest */
+      --clr-secondary: #7f8c6b;  · dried sage
+      --clr-accent: #b68b6b;     · terracotta
+      --clr-bg: #fbf7f0;         · warm paper
+      --clr-surface: #f4efe7;
+      --clr-text: #2b2b28;
+      --clr-muted: #5f5e5a;
+      --clr-border: #d9d2c5;
+    }
+
+    /* ----- LAYOUT CONTAINER ----- */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.8rem;
+    }
+    @media (min-width: 768px) { .container { padding: 0 3rem; } }
+
+    /* ----- NAVIGATION (editorial, uncluttered) ----- */
+    nav {
+      padding: 1.8rem 0 0.8rem;
+      border-bottom: 1px solid var(--clr-border);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .logo span { color: var(--clr-secondary); font-weight: 400; }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.95rem;
+      font-weight: 400;
+      flex-wrap: wrap;
+    }
+    .nav-links a { padding: 0.3rem 0; border-bottom: 2px solid transparent; transition: 0.2s; }
+    .nav-links a:hover { border-bottom-color: var(--clr-accent); }
+    .nav-search { background: var(--clr-surface); padding: 0.3rem 1rem; border-radius: 40px; display: flex; align-items: center; gap: 0.4rem; border: 1px solid var(--clr-border); }
+    .nav-search input { border: none; background: transparent; font-size: 0.9rem; width: 140px; outline: none; }
+    .nav-search button { background: none; border: none; cursor: pointer; font-size: 1rem; }
+
+    /* ----- HOMEPAGE: editorial notebook layout (non‑standard) ----- */
+    .home-header {
+      padding: 3.5rem 0 2.5rem;
+      border-bottom: 1px solid var(--clr-border);
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .home-header h1 { margin-bottom: 0.5rem; }
+    .home-header .lead { font-size: 1.25rem; color: var(--clr-muted); max-width: 36rem; }
+    .home-header .image-block { border-radius: 8px; overflow: hidden; background: #d9d2c5; }
+    .home-header .image-block img { width: 100%; height: 220px; object-fit: cover; }
+
+    /* knowledge explorer (unique component) */
+    .knowledge-explorer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem;
+      margin: 3rem 0 4rem;
+    }
+    .explorer-card {
+      background: var(--clr-surface);
+      padding: 1.8rem 1.5rem;
+      border-radius: 4px;
+      border-left: 6px solid var(--clr-secondary);
+      transition: 0.2s;
+    }
+    .explorer-card:hover { background: #ede8de; }
+    .explorer-card h4 { margin-bottom: 0.3rem; }
+    .explorer-card p { font-size: 0.95rem; color: var(--clr-muted); }
+
+    /* featured articles – split cards */
+    .featured-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      margin: 2rem 0 4rem;
+    }
+    .featured-card {
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      transition: 0.25s ease;
+    }
+    .featured-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.06); transform: translateY(-2px); }
+    .featured-card img { height: 200px; object-fit: cover; background: #d0c9bc; }
+    .featured-card .content { padding: 1.8rem 2rem 2rem; }
+    .featured-card .content .tag { margin-bottom: 0.6rem; }
+    .featured-card .content h3 { margin: 0.3rem 0 0.8rem; }
+    .featured-card .content .meta { display: flex; gap: 1rem; margin-top: 0.8rem; }
+
+    /* horizontal story row (compact) */
+    .story-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      margin: 3rem 0 2rem;
+      border-top: 1px solid var(--clr-border);
+      padding-top: 2rem;
+    }
+    .story-item {
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      gap: 1rem;
+      padding: 0.8rem 0.2rem;
+      border-bottom: 1px solid #eeeae1;
+      align-items: center;
+    }
+    .story-item .story-meta { font-size: 0.8rem; color: var(--clr-muted); }
+    .story-item .story-title { font-weight: 500; font-family: 'EB Garamond', serif; font-size: 1.1rem; }
+    .story-item .story-cat { text-align: right; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--clr-secondary); }
+
+    /* infographic / diagram */
+    .infographic-block {
+      background: var(--clr-surface);
+      padding: 2rem 2.5rem;
+      border-radius: 4px;
+      margin: 3rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      border: 1px solid var(--clr-border);
+    }
+    .infographic-block .chart {
+      flex: 2;
+      min-width: 240px;
+      background: #e3ddd2;
+      height: 140px;
+      border-radius: 4px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      padding: 0.8rem;
+    }
+    .infographic-block .chart .bar {
+      width: 18%;
+      background: var(--clr-primary);
+      border-radius: 4px 4px 0 0;
+      transition: 0.3s;
+    }
+    .infographic-block .chart .bar:nth-child(2) { height: 70%; background: var(--clr-secondary); }
+    .infographic-block .chart .bar:nth-child(3) { height: 90%; background: var(--clr-accent); }
+    .infographic-block .chart .bar:nth-child(4) { height: 50%; background: #a7b89a; }
+    .infographic-block .chart .bar:nth-child(5) { height: 85%; background: #b6a68b; }
+    .infographic-block .desc { flex: 1; min-width: 200px; }
+
+    /* footer (unique, layered) */
+    footer {
+      margin-top: 5rem;
+      background: #2f4f3a;
+      color: #e3ddd2;
+      padding: 3.5rem 0 2rem;
+      border-top: 4px solid #b68b6b;
+    }
+    footer a { color: #d9d2c5; border-bottom: 1px dotted #7f8c6b; }
+    footer .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+    footer .footer-grid h4 { color: #f4efe7; margin-bottom: 0.8rem; font-weight: 500; }
+    footer .footer-grid ul { list-style: none; padding: 0; }
+    footer .footer-grid ul li { margin-bottom: 0.3rem; }
+    footer .copy { margin-top: 2.5rem; font-size: 0.8rem; border-top: 1px solid #5f6e4b; padding-top: 1.8rem; text-align: center; }
+
+    /* article page (long-form) */
+    .article-main {
+      max-width: 780px;
+      margin: 3rem auto;
+      background: white;
+      padding: 2.5rem 3rem;
+      border-radius: 4px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.02);
+    }
+    .article-main h1 { font-size: 2.8rem; line-height: 1.15; margin-bottom: 0.2rem; }
+    .article-main .subtitle { font-size: 1.25rem; color: var(--clr-muted); font-weight: 300; margin-bottom: 1rem; }
+    .article-main .byline { display: flex; gap: 1.5rem; flex-wrap: wrap; margin: 1rem 0 2rem; }
+    .article-main .byline .author { font-weight: 500; }
+    .article-main .toc { background: var(--clr-surface); padding: 1.2rem 2rem; border-radius: 4px; margin: 1.5rem 0; }
+    .article-main .toc li { list-style: none; border-bottom: 1px solid #e3ddd2; padding: 0.2rem 0; }
+    .article-main h2 { margin: 2rem 0 0.5rem; }
+    .article-main h3 { margin: 1.5rem 0 0.3rem; }
+    .article-main p { margin-bottom: 1.2rem; }
+    .article-main .tip-box { background: #f4efe7; padding: 1.2rem 1.8rem; border-left: 6px solid var(--clr-accent); margin: 1.8rem 0; }
+    .article-main .faq-item { border-bottom: 1px solid #eeeae1; padding: 0.8rem 0; }
+    .article-main .faq-item strong { display: block; font-weight: 500; }
+
+    /* responsive */
+    @media (max-width: 800px) {
+      .home-header { grid-template-columns: 1fr; gap: 1rem; }
+      .knowledge-explorer { grid-template-columns: 1fr; }
+      .featured-grid { grid-template-columns: 1fr; }
+      .story-item { grid-template-columns: 1fr; gap: 0.2rem; }
+      .story-item .story-cat { text-align: left; }
+      footer .footer-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { gap: 1rem; font-size: 0.85rem; }
+      .nav-search input { width: 100px; }
+      .article-main { padding: 1.5rem; }
+    }
+    @media (max-width: 500px) {
+      nav { flex-direction: column; align-items: stretch; gap: 0.5rem; }
+      .nav-links { justify-content: center; }
+      .nav-search { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== NAVIGATION ====== -->
+<div class="container">
+  <nav>
+    <div class="logo">🌱 Uncharted<span>Garden Paths</span></div>
+    <div class="nav-links">
+         <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li> 
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+    </div>
+    <div class="nav-search">
+      <input type="text" placeholder="Search plants, topics…" aria-label="Search">
+      <button aria-label="search">🔍</button>
+    </div>
+  </nav>
+</div>
+
+<!-- ====== HOMEPAGE ====== -->
+<main class="container">
+
+  <!-- HERO + intro (split) -->
+  <header class="home-header">
+    <div>
+      <h1>Where soil meets story.</h1>
+      <p class="lead">Uncharted Garden Paths is a quiet almanac for the curious gardener — celebrating forgotten varieties, regenerative wisdom, and the poetry of growing.</p>
+      <div style="margin-top:1.2rem; display:flex; gap:0.8rem; flex-wrap:wrap;">
+        <span class="tag">🌿 heirloom</span>
+        <span class="tag">🌱 soil</span>
+        <span class="tag">🐝 pollinators</span>
+      </div>
+    </div>
+    <div class="image-block">
+      <!-- HERO IMAGE: garden path / leaves -->
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23b6a68b'/%3E%3Cpath d='M0 400 L200 120 L400 200 L600 80 L600 400 Z' fill='%232f4f3a' opacity='0.6'/%3E%3Ccircle cx='150' cy='180' r='40' fill='%23b68b6b' opacity='0.5'/%3E%3Ccircle cx='420' cy='130' r='60' fill='%237f8c6b' opacity='0.4'/%3E%3C/svg%3E"
+           alt="A winding garden path through layered foliage, warm earth tones">
+    </div>
+  </header>
+
+  <!-- KNOWLEDGE EXPLORER (unique component) -->
+  <section class="knowledge-explorer">
+    <div class="explorer-card">
+      <h4>📖 The Seed Library</h4>
+      <p>Stories of rare beans, indigo tomatoes, and the keepers who saved them.</p>
+    </div>
+    <div class="explorer-card">
+      <h4>🪴 Soil Alchemy</h4>
+      <p>From compost tea to no‑dig beds — practical wisdom for living earth.</p>
+    </div>
+    <div class="explorer-card">
+      <h4>🌼 Pollinator Chronicles</h4>
+      <p>How native plants and wild edges bring the garden to life.</p>
+    </div>
+  </section>
+
+  <!-- FEATURED ARTICLES (premium split cards) -->
+  <section class="featured-grid">
+    <article class="featured-card">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='300' viewBox='0 0 600 300'%3E%3Crect width='600' height='300' fill='%23d0c9bc'/%3E%3Ccircle cx='120' cy='150' r='70' fill='%237f8c6b' opacity='0.3'/%3E%3Ccircle cx='400' cy='120' r='90' fill='%232f4f3a' opacity='0.3'/%3E%3C/svg%3E"
+           alt="Heirloom tomato varieties displayed on a wooden table">
+      <div class="content">
+        <span class="tag">heirloom</span>
+        <h3>The Last Seed: Saving the Cherokee Purple</h3>
+        <p>One gardener’s decade‑long mission to preserve a legendary tomato — and what it teaches us about resilience.</p>
+        <div class="meta"><span>by Elara Finch</span><span>· 12 min read</span></div>
+      </div>
+    </article>
+    <article class="featured-card">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='300' viewBox='0 0 600 300'%3E%3Crect width='600' height='300' fill='%23b6a68b'/%3E%3Cpath d='M0 150 L200 100 L400 180 L600 90 L600 300 L0 300 Z' fill='%235f6e4b' opacity='0.5'/%3E%3C/svg%3E"
+           alt="Close-up of dark, crumbly soil with a seedling">
+      <div class="content">
+        <span class="tag">soil</span>
+        <h3>Beyond NPK: The Fungal Network Underfoot</h3>
+        <p>Mycorrhizal relationships are the secret language of the garden. Here’s how to nurture them.</p>
+        <div class="meta"><span>by Dr. Mira Thorne</span><span>· 8 min read</span></div>
+      </div>
+    </article>
+  </section>
+
+  <!-- INFOGRAPHIC (diagram) -->
+  <div class="infographic-block">
+    <div class="chart">
+      <div class="bar" style="height:60%"></div>
+      <div class="bar" style="height:80%"></div>
+      <div class="bar" style="height:100%"></div>
+      <div class="bar" style="height:45%"></div>
+      <div class="bar" style="height:90%"></div>
+    </div>
+    <div class="desc">
+      <h4>📊 Pollinator visits by season</h4>
+      <p style="color:var(--clr-muted); margin-top:0.2rem;">From early spring to late autumn, the garden hums with activity. Native plants extend the feast.</p>
+      <span class="tag">data · 2025</span>
+    </div>
+  </div>
+
+  <!-- STORY ROW (compact horizontal) -->
+  <section class="story-row">
+    <div class="story-item"><span class="story-meta">Apr 12</span><span class="story-title">The Art of Overwintering Geraniums</span><span class="story-cat">techniques</span></div>
+    <div class="story-item"><span class="story-meta">Apr 9</span><span class="story-title">Sage, Rosemary & Thyme: A Mediterranean Trio</span><span class="story-cat">herbs</span></div>
+    <div class="story-item"><span class="story-meta">Apr 4</span><span class="story-title">Why Weeds Are Not the Enemy</span><span class="story-cat">soil</span></div>
+    <div class="story-item"><span class="story-meta">Mar 28</span><span class="story-title">Planting by the Moon: Ancient Rhythms</span><span class="story-cat">folklore</span></div>
+  </section>
+
+  <!-- QUICK NOTE: internal linking -->
+  <div style="margin: 1.5rem 0; background: #f4efe7; padding: 1.2rem 2rem; border-radius: 4px; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center;">
+    <span style="font-weight:500;">🌿 Explore our <a href="#" style="border-bottom:2px solid var(--clr-accent);">complete field guide</a> to heirloom vegetables</span>
+    <span><a href="#">Read the full archive →</a></span>
+  </div>
+</main>
+
+<!-- ====== ARTICLE PAGE (long-form example) ====== -->
+<article class="container article-main" id="article">
+  <span class="tag">heirloom</span>
+  <h1>The Cherokee Purple: A Living Legacy</h1>
+  <p class="subtitle">How one tomato carries the memory of a people, and why it matters today.</p>
+  <div class="byline">
+    <span class="author">by Elara Finch</span>
+    <span>Published April 15, 2026</span>
+    <span>Updated April 18, 2026</span>
+    <span>· 14 min read</span>
+  </div>
+  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Crect width='800' height='400' fill='%23d0c9bc'/%3E%3Ccircle cx='200' cy='180' r='80' fill='%236a4e3a' opacity='0.4'/%3E%3Ccircle cx='550' cy='200' r='100' fill='%23b68b6b' opacity='0.3'/%3E%3C/svg%3E"
+       alt="Ripe Cherokee Purple tomatoes with deep dusky shoulders, rich color" style="border-radius:4px; margin:1rem 0 2rem;">
+
+  <div class="toc">
+    <strong>Contents</strong>
+    <ul style="list-style:none; padding:0; margin-top:0.4rem;">
+      <li>· Origins in the Appalachian South</li>
+      <li>· Growing conditions & flavor profile</li>
+      <li>· Seed saving techniques</li>
+      <li>· Cultural significance</li>
+    </ul>
+  </div>
+
+  <h2>Origins of a Dusky Beauty</h2>
+  <p>The Cherokee Purple is not merely a tomato; it is a story carried across generations. Believed to have been cultivated by the Cherokee people in the Appalachian region, this beefsteak variety boasts a dusky pink‑purple skin and a complex, smoky sweetness that has captivated gardeners for decades.</p>
+  <p>Unlike modern hybrids bred for uniformity, the Cherokee Purple is a celebration of imperfection — its ribbed shoulders and deep green “neck” are badges of authenticity. In the 1990s, seeds were shared with seed savers like Craig LeHoullier, who helped bring this heirloom to a wider audience.</p>
+
+  <div class="tip-box">
+    <strong>🌱 Gardener’s Note:</strong> Cherokee Purple tomatoes thrive in warm climates with consistent moisture. They are indeterminate, meaning they will continue to produce until frost.
+  </div>
+
+  <h2>Flavor & Culinary Use</h2>
+  <p>The flavor is often described as “complex” — a balance of sweetness and acidity with a hint of smokiness. It is exceptional for slicing, sandwiches, and simple salads. Because of its thin skin, it is best enjoyed fresh.</p>
+
+  <h3>Seed Saving Steps</h3>
+  <ul>
+    <li>Select fully ripe, disease‑free fruit from the healthiest plants.</li>
+    <li>Scoop seeds into a jar with water and let ferment for 2‑3 days.</li>
+    <li>Rinse, dry on a paper plate, and store in a cool, dark place.</li>
+  </ul>
+
+  <h2>Why Preserve Heirlooms?</h2>
+  <p>Every heirloom variety is a genetic library, adapted to local conditions and tastes. By growing and sharing seeds, we participate in a living tradition — one that resists the homogenization of our food system.</p>
+
+  <!-- FAQ mini -->
+  <div style="margin:2rem 0;">
+    <h3>Frequently Asked Questions</h3>
+    <div class="faq-item"><strong>How long does it take to mature?</strong> About 80‑85 days from transplant.</div>
+    <div class="faq-item"><strong>Can I grow it in containers?</strong> Yes, but use a 15‑gallon pot with rich soil.</div>
+    <div class="faq-item"><strong>Is it disease resistant?</strong> Moderate resistance; good air circulation helps.</div>
+  </div>
+
+  <p><strong>Related:</strong> <a href="#">The Art of Tomato Caging</a> · <a href="#">Fermenting Seeds for Better Viability</a></p>
+  <div style="border-top:1px solid var(--clr-border); margin-top:2.5rem; padding-top:1.5rem; display:flex; gap:1.5rem; flex-wrap:wrap;">
+    <span class="tag">heirloom</span><span class="tag">tomato</span><span class="tag">seed saving</span>
+  </div>
+</article>
+
+<!-- ====== FOOTER (unique, layered) ====== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 style="font-family:'EB Garamond',serif; font-size:1.6rem;">🌱 Uncharted Garden</h4>
+        <p style="max-width:240px; color:#d9d2c5;">Cultivating curiosity, one seed at a time. A digital almanac for the thoughtful gardener.</p>
+        <p style="margin-top:0.6rem; font-size:0.9rem;">✉️ hello@unchartedgarden.com</p>
+      </div>
+      <div>
+        <h4>Journal</h4>
+        <ul><li><a href="#">Latest</a></li><li><a href="#">Heirlooms</a></li><li><a href="#">Soil Science</a></li><li><a href="#">Pollinators</a></li></ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul><li><a href="#">Seed Library</a></li><li><a href="#">Growing Guides</a></li><li><a href="#">Glossary</a></li><li><a href="#">Bookshop</a></li></ul>
+      </div>
+      <div>
+        <h4>About</h4>
+        <ul><li><a href="#">Editorial Policy</a></li><li><a href="#">Authors</a></li><li><a href="#">Contact</a></li><li><a href="#">Privacy</a></li></ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 Uncharted Garden Paths. All rights reserved. · <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Cookie Policy</a> · <a href="#">Disclaimer</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== additional pages: About, Contact, etc. are linked in footer ====== -->
+</body>
+</html>

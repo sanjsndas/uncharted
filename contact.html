@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Contact · Uncharted Garden Paths</title>
+  <meta name="description" content="Reach out to Uncharted Garden Paths – we’d love to hear from fellow gardeners and curious minds.">
+  <!-- Google Fonts: refined serif & humanist sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+  <style>
+    /* ----- RESET & BASE ----- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #fbf7f0;
+      color: #2b2b28;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; display: block; }
+    ul, ol { padding-left: 1.2rem; }
+
+    /* ----- TYPOGRAPHY (premium, garden-inspired) ----- */
+    h1, h2, h3, h4, .logo, .nav-primary a, .article-title {
+      font-family: 'EB Garamond', serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); line-height: 1.1; }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2; }
+    h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); line-height: 1.3; }
+    h4 { font-size: clamp(1.1rem, 1.8vw, 1.4rem); }
+    .body-large { font-size: 1.2rem; font-weight: 300; line-height: 1.7; }
+    .meta, .caption, .small-print { font-size: 0.875rem; color: #5f5e5a; letter-spacing: 0.02em; }
+    .tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; background: #e8e3da; padding: 0.2rem 0.8rem; border-radius: 40px; display: inline-block; }
+
+    /* ----- COLOR (earthy, muted, high readability) ----- */
+    :root {
+      --clr-primary: #2f4f3a;    /* deep forest */
+      --clr-secondary: #7f8c6b;  /* dried sage */
+      --clr-accent: #b68b6b;     /* terracotta */
+      --clr-bg: #fbf7f0;         /* warm paper */
+      --clr-surface: #f4efe7;
+      --clr-text: #2b2b28;
+      --clr-muted: #5f5e5a;
+      --clr-border: #d9d2c5;
+    }
+
+    /* ----- LAYOUT CONTAINER ----- */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.8rem;
+    }
+    @media (min-width: 768px) { .container { padding: 0 3rem; } }
+
+    /* ----- NAVIGATION (editorial) ----- */
+    nav {
+      padding: 1.8rem 0 0.8rem;
+      border-bottom: 1px solid var(--clr-border);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .logo span { color: var(--clr-secondary); font-weight: 400; }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.95rem;
+      font-weight: 400;
+      flex-wrap: wrap;
+    }
+    .nav-links a { padding: 0.3rem 0; border-bottom: 2px solid transparent; transition: 0.2s; }
+    .nav-links a:hover { border-bottom-color: var(--clr-accent); }
+    .nav-search { background: var(--clr-surface); padding: 0.3rem 1rem; border-radius: 40px; display: flex; align-items: center; gap: 0.4rem; border: 1px solid var(--clr-border); }
+    .nav-search input { border: none; background: transparent; font-size: 0.9rem; width: 140px; outline: none; }
+    .nav-search button { background: none; border: none; cursor: pointer; font-size: 1rem; }
+
+    /* ----- CONTACT PAGE (warm, open, inviting) ----- */
+    .contact-main {
+      max-width: 820px;
+      margin: 3rem auto 5rem;
+      background: white;
+      padding: 2.5rem 3rem;
+      border-radius: 4px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.02);
+    }
+    .contact-main h1 {
+      font-size: 2.8rem;
+      line-height: 1.15;
+      margin-bottom: 0.2rem;
+    }
+    .contact-main .subtitle {
+      font-size: 1.2rem;
+      color: var(--clr-muted);
+      font-weight: 300;
+      margin-bottom: 1.8rem;
+      border-bottom: 1px solid var(--clr-border);
+      padding-bottom: 1.2rem;
+    }
+    .contact-main .contact-intro {
+      margin-bottom: 2rem;
+    }
+    .contact-main .contact-intro p {
+      margin-bottom: 0.6rem;
+    }
+    .contact-main .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2.5rem;
+      margin-top: 1.5rem;
+    }
+    .contact-main .contact-info {
+      background: var(--clr-surface);
+      padding: 1.5rem 1.8rem;
+      border-radius: 4px;
+      border: 1px solid var(--clr-border);
+      align-self: start;
+    }
+    .contact-main .contact-info h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+    }
+    .contact-main .contact-info p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      color: var(--clr-text);
+    }
+    .contact-main .contact-info .detail {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+    }
+    .contact-main .contact-info .detail strong {
+      font-weight: 500;
+      color: var(--clr-primary);
+      min-width: 60px;
+    }
+    .contact-main .contact-info .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .contact-main .contact-info .social-links a {
+      background: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 40px;
+      border: 1px solid var(--clr-border);
+      font-size: 0.8rem;
+      transition: 0.15s;
+    }
+    .contact-main .contact-info .social-links a:hover {
+      background: var(--clr-primary);
+      color: white;
+      border-color: var(--clr-primary);
+    }
+    /* form */
+    .contact-main form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .contact-main form .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .contact-main form label {
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--clr-primary);
+      letter-spacing: 0.02em;
+    }
+    .contact-main form input,
+    .contact-main form textarea,
+    .contact-main form select {
+      font-family: 'Inter', sans-serif;
+      background: white;
+      border: 1px solid var(--clr-border);
+      border-radius: 4px;
+      padding: 0.7rem 1rem;
+      font-size: 0.95rem;
+      transition: 0.2s;
+      width: 100%;
+    }
+    .contact-main form input:focus,
+    .contact-main form textarea:focus,
+    .contact-main form select:focus {
+      outline: none;
+      border-color: var(--clr-accent);
+      box-shadow: 0 0 0 3px rgba(182, 139, 107, 0.2);
+    }
+    .contact-main form textarea { min-height: 120px; resize: vertical; }
+    .contact-main form .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+    }
+    .contact-main form .checkbox-group input { width: auto; }
+    .contact-main form .submit-btn {
+      background: var(--clr-primary);
+      color: white;
+      border: none;
+      padding: 0.9rem 2rem;
+      border-radius: 40px;
+      font-weight: 500;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+      align-self: flex-start;
+      margin-top: 0.4rem;
+      letter-spacing: 0.02em;
+      border: 1px solid var(--clr-primary);
+    }
+    .contact-main form .submit-btn:hover {
+      background: #1f3a2a;
+      border-color: #1f3a2a;
+      transform: scale(1.01);
+    }
+    .contact-main .back-link {
+      display: inline-block;
+      margin-top: 2.5rem;
+      padding: 0.6rem 1.8rem;
+      background: var(--clr-surface);
+      border-radius: 40px;
+      font-size: 0.9rem;
+      border: 1px solid var(--clr-border);
+      transition: 0.2s;
+    }
+    .contact-main .back-link:hover {
+      background: #e3ddd2;
+      border-color: var(--clr-secondary);
+    }
+
+    /* footer */
+    footer {
+      margin-top: 5rem;
+      background: #2f4f3a;
+      color: #e3ddd2;
+      padding: 3.5rem 0 2rem;
+      border-top: 4px solid #b68b6b;
+    }
+    footer a { color: #d9d2c5; border-bottom: 1px dotted #7f8c6b; }
+    footer .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+    footer .footer-grid h4 { color: #f4efe7; margin-bottom: 0.8rem; font-weight: 500; }
+    footer .footer-grid ul { list-style: none; padding: 0; }
+    footer .footer-grid ul li { margin-bottom: 0.3rem; }
+    footer .copy { margin-top: 2.5rem; font-size: 0.8rem; border-top: 1px solid #5f6e4b; padding-top: 1.8rem; text-align: center; }
+
+    /* responsive */
+    @media (max-width: 800px) {
+      .contact-main { padding: 1.8rem; margin: 2rem 1rem; }
+      .contact-main .contact-grid { grid-template-columns: 1fr; }
+      footer .footer-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { gap: 1rem; font-size: 0.85rem; }
+      .nav-search input { width: 100px; }
+    }
+    @media (max-width: 500px) {
+      nav { flex-direction: column; align-items: stretch; gap: 0.5rem; }
+      .nav-links { justify-content: center; }
+      .nav-search { width: 100%; }
+      .contact-main h1 { font-size: 2.2rem; }
+      .contact-main form .submit-btn { align-self: stretch; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== NAVIGATION ====== -->
+<div class="container">
+  <nav>
+    <div class="logo">🌱 Uncharted<span>Garden Paths</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms Of Privacy</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookies.html">Cookies Policy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="categories.html">Categories</a>
+    </div>
+    <div class="nav-search">
+      <input type="text" placeholder="Search plants, topics…" aria-label="Search">
+      <button aria-label="search">🔍</button>
+    </div>
+  </nav>
+</div>
+
+<!-- ====== CONTACT PAGE ====== -->
+<main class="container contact-main">
+  <span class="tag">🌿 get in touch</span>
+  <h1>Contact Us</h1>
+  <p class="subtitle">We’d love to hear from you — every seed of thought matters.</p>
+
+  <div class="contact-intro">
+    <p>Whether you have a question about heirloom tomatoes, want to share your own garden story, or simply wish to say hello — drop us a line. We read every message and reply as soon as the soil dries.</p>
+  </div>
+
+  <div class="contact-grid">
+    <!-- left: info & social -->
+    <div class="contact-info">
+      <h3>🌻 Reach out</h3>
+      <p>Feel free to connect through any of these channels.</p>
+      <div class="detail"><strong>📍 Garden</strong> 42 Wildflower Lane, Somerset, UK</div>
+      <div class="detail"><strong>📧 Email</strong> hello@unchartedgarden.com</div>
+      <div class="detail"><strong>📞 Phone</strong> +44 7700 900123</div>
+      <div class="social-links">
+        <a href="#">Instagram</a>
+        <a href="#">Pinterest</a>
+        <a href="#">YouTube</a>
+        <a href="#">Bluesky</a>
+      </div>
+      <p style="margin-top:1.2rem; font-size:0.9rem; border-top:1px solid var(--clr-border); padding-top:1rem; color:var(--clr-muted);">
+        <strong>📬 Response time:</strong> within 2–3 working days.
+      </p>
+    </div>
+
+    <!-- right: contact form -->
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" placeholder="e.g., Ada Lovelace" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="ada@example.com" required>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject">
+          <option value="">— Choose a topic —</option>
+          <option value="question">Gardening question</option>
+          <option value="story">Share a garden story</option>
+          <option value="collab">Collaboration / press</option>
+          <option value="feedback">Feedback about the site</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message here…" required></textarea>
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="consent" name="consent" value="yes" required>
+        <label for="consent">I agree to the <a href="privacy.html" style="color:var(--clr-primary); border-bottom:1px dotted var(--clr-accent);">Privacy Policy</a> and consent to being contacted.</label>
+      </div>
+      <button type="submit" class="submit-btn">Send message →</button>
+    </form>
+  </div>
+
+  <a href="index.html" class="back-link">← Back to the garden</a>
+</main>
+
+<!-- ====== FOOTER (unique, layered) ====== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 style="font-family:'EB Garamond',serif; font-size:1.6rem;">🌱 Uncharted Garden</h4>
+        <p style="max-width:240px; color:#d9d2c5;">Cultivating curiosity, one seed at a time. A digital almanac for the thoughtful gardener.</p>
+        <p style="margin-top:0.6rem; font-size:0.9rem;">✉️ hello@unchartedgarden.com</p>
+      </div>
+      <div>
+        <h4>Journal</h4>
+        <ul><li><a href="#">Latest</a></li><li><a href="#">Heirlooms</a></li><li><a href="#">Soil Science</a></li><li><a href="#">Pollinators</a></li></ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul><li><a href="#">Seed Library</a></li><li><a href="#">Growing Guides</a></li><li><a href="#">Glossary</a></li><li><a href="#">Bookshop</a></li></ul>
+      </div>
+      <div>
+        <h4>About</h4>
+        <ul><li><a href="#">Editorial Policy</a></li><li><a href="#">Authors</a></li><li><a href="#">Contact</a></li><li><a href="#">Privacy</a></li></ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 Uncharted Garden Paths. All rights reserved. · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="cookies.html">Cookie Policy</a> · <a href="disclaimer.html">Disclaimer</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

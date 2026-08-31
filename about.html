@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>About – Uncharted Garden Paths</title>
+  <meta name="description" content="About Uncharted Garden Paths – our mission, team, and the story behind this independent gardening publication." />
+  <!-- Google Fonts: refined serif & humanist sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet" />
+  <style>
+    /* ----- RESET & BASE (same as main site) ----- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #fbf7f0;
+      color: #2b2b28;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; display: block; }
+    ul, ol { padding-left: 1.2rem; }
+
+    /* ----- TYPOGRAPHY (premium, garden-inspired) ----- */
+    h1, h2, h3, h4, .logo, .nav-primary a, .article-title {
+      font-family: 'EB Garamond', serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); line-height: 1.1; }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2; }
+    h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); line-height: 1.3; }
+    h4 { font-size: clamp(1.1rem, 1.8vw, 1.4rem); }
+    .body-large { font-size: 1.2rem; font-weight: 300; line-height: 1.7; }
+    .meta, .caption, .small-print { font-size: 0.875rem; color: #5f5e5a; letter-spacing: 0.02em; }
+    .tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; background: #e8e3da; padding: 0.2rem 0.8rem; border-radius: 40px; display: inline-block; }
+
+    /* ----- COLOR (earthy, muted) ----- */
+    :root {
+      --clr-primary: #2f4f3a;
+      --clr-secondary: #7f8c6b;
+      --clr-accent: #b68b6b;
+      --clr-bg: #fbf7f0;
+      --clr-surface: #f4efe7;
+      --clr-text: #2b2b28;
+      --clr-muted: #5f5e5a;
+      --clr-border: #d9d2c5;
+    }
+
+    /* ----- LAYOUT CONTAINER ----- */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.8rem;
+    }
+    @media (min-width: 768px) { .container { padding: 0 3rem; } }
+
+    /* ----- NAVIGATION (editorial) ----- */
+    nav {
+      padding: 1.8rem 0 0.8rem;
+      border-bottom: 1px solid var(--clr-border);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .logo span { color: var(--clr-secondary); font-weight: 400; }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.95rem;
+      font-weight: 400;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+    }
+    .nav-links a { padding: 0.3rem 0; border-bottom: 2px solid transparent; transition: 0.2s; }
+    .nav-links a:hover { border-bottom-color: var(--clr-accent); }
+    .nav-search { background: var(--clr-surface); padding: 0.3rem 1rem; border-radius: 40px; display: flex; align-items: center; gap: 0.4rem; border: 1px solid var(--clr-border); }
+    .nav-search input { border: none; background: transparent; font-size: 0.9rem; width: 140px; outline: none; }
+    .nav-search button { background: none; border: none; cursor: pointer; font-size: 1rem; }
+
+    /* ----- ABOUT PAGE SPECIFIC ----- */
+    .about-hero {
+      padding: 3rem 0 2rem;
+      border-bottom: 1px solid var(--clr-border);
+      margin-bottom: 2.5rem;
+    }
+    .about-hero h1 { margin-bottom: 0.5rem; }
+    .about-hero .lead { font-size: 1.3rem; color: var(--clr-muted); max-width: 38rem; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 3rem;
+      margin: 2rem 0 3rem;
+    }
+    .about-grid .image-block {
+      background: #d9d2c5;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .about-grid .image-block img { width: 100%; height: 100%; object-fit: cover; min-height: 220px; }
+
+    .mission-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .mission-item {
+      background: var(--clr-surface);
+      padding: 1.5rem 2rem;
+      border-radius: 4px;
+      border-left: 6px solid var(--clr-accent);
+    }
+    .mission-item h4 { margin-bottom: 0.2rem; }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0 3rem;
+    }
+    .team-card {
+      background: white;
+      padding: 1.8rem 1.2rem;
+      border-radius: 4px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+      text-align: center;
+      border: 1px solid #e8e3da;
+    }
+    .team-card .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--clr-secondary);
+      margin: 0 auto 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      color: white;
+    }
+    .team-card h4 { margin-bottom: 0.1rem; }
+    .team-card .role { font-size: 0.85rem; color: var(--clr-muted); }
+
+    .timeline {
+      border-left: 3px solid var(--clr-secondary);
+      padding-left: 2rem;
+      margin: 2.5rem 0;
+    }
+    .timeline-item { margin-bottom: 1.8rem; }
+    .timeline-item .year { font-weight: 600; font-family: 'EB Garamond', serif; font-size: 1.4rem; color: var(--clr-primary); }
+    .timeline-item p { margin-top: 0.1rem; }
+
+    /* footer (same as main) */
+    footer {
+      margin-top: 5rem;
+      background: #2f4f3a;
+      color: #e3ddd2;
+      padding: 3.5rem 0 2rem;
+      border-top: 4px solid #b68b6b;
+    }
+    footer a { color: #d9d2c5; border-bottom: 1px dotted #7f8c6b; }
+    footer .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+    footer .footer-grid h4 { color: #f4efe7; margin-bottom: 0.8rem; font-weight: 500; }
+    footer .footer-grid ul { list-style: none; padding: 0; }
+    footer .footer-grid ul li { margin-bottom: 0.3rem; }
+    footer .copy { margin-top: 2.5rem; font-size: 0.8rem; border-top: 1px solid #5f6e4b; padding-top: 1.8rem; text-align: center; }
+
+    /* responsive */
+    @media (max-width: 800px) {
+      .about-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      footer .footer-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { gap: 1rem; font-size: 0.85rem; }
+      .nav-search input { width: 100px; }
+    }
+    @media (max-width: 500px) {
+      nav { flex-direction: column; align-items: stretch; gap: 0.5rem; }
+      .nav-links { justify-content: center; }
+      .nav-search { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== NAVIGATION (identical to main) ====== -->
+<div class="container">
+  <nav>
+    <div class="logo">🌱 Uncharted<span>Garden Paths</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="terms.html">Terms Of Privacy</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="cookies.html">Cookies Policy</a></li>
+      <li><a href="disclaimer.html">Disclaimer</a></li>
+      <li><a href="categories.html">Categories</a></li>
+    </ul>
+    <div class="nav-search">
+      <input type="text" placeholder="Search plants, topics…" aria-label="Search" />
+      <button aria-label="search">🔍</button>
+    </div>
+  </nav>
+</div>
+
+<!-- ====== ABOUT PAGE CONTENT ====== -->
+<main class="container">
+
+  <!-- ABOUT HERO -->
+  <header class="about-hero">
+    <h1>About this garden.</h1>
+    <p class="lead">Uncharted Garden Paths is an independent publication rooted in curiosity, heirloom wisdom, and the quiet art of tending living things. We believe every seed holds a story.</p>
+  </header>
+
+  <!-- GRID: mission + image -->
+  <div class="about-grid">
+    <div>
+      <h2>Our compass</h2>
+      <p style="font-size:1.1rem; color:var(--clr-muted); margin: 0.8rem 0 1.2rem;">We explore the forgotten, the overlooked, and the deeply rooted — from Appalachian heirlooms to soil microbiology, from pollinator corridors to the poetry of growth.</p>
+      <p>Founded in 2021, Uncharted Garden Paths began as a small newsletter among friends and has grown into a quiet almanac for gardeners, naturalists, and anyone who finds solace in the soil. We are ad‑free, independent, and committed to regenerative practices.</p>
+      <div style="margin-top:1.5rem; display:flex; gap:0.8rem; flex-wrap:wrap;">
+        <span class="tag">🌱 no‑dig</span>
+        <span class="tag">🧑‍🌾 seed saving</span>
+        <span class="tag">🐝 native plants</span>
+      </div>
+    </div>
+    <div class="image-block">
+      <!-- evocative garden image -->
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23b6a68b'/%3E%3Cpath d='M0 200 L150 80 L300 180 L450 100 L600 200 L600 400 L0 400 Z' fill='%232f4f3a' opacity='0.5'/%3E%3Ccircle cx='180' cy='250' r='60' fill='%23b68b6b' opacity='0.4'/%3E%3Ccircle cx='450' cy='280' r='80' fill='%237f8c6b' opacity='0.3'/%3E%3C/svg%3E"
+           alt="A winding garden path through layered foliage and wildflowers, warm earthy palette" />
+    </div>
+  </div>
+
+  <!-- MISSION ITEMS (unique values) -->
+  <div class="mission-list">
+    <div class="mission-item">
+      <h4>📖 Heirloom preservation</h4>
+      <p>We document and celebrate rare varieties — from Cherokee Purple tomatoes to Jacob’s Cattle beans — and connect with seed keepers around the world.</p>
+    </div>
+    <div class="mission-item">
+      <h4>🌿 Soil as living system</h4>
+      <p>We champion no‑dig, compost, and fungal networks. Healthy soil is the foundation of flavor, resilience, and carbon capture.</p>
+    </div>
+    <div class="mission-item">
+      <h4>🪶 Wild edges & pollinators</h4>
+      <p>We advocate for native plants, hedgerows, and insect habitat. A garden is not an island; it is part of a larger ecology.</p>
+    </div>
+  </div>
+
+  <!-- TEAM SECTION -->
+  <h2>Gardeners & writers</h2>
+  <p style="color:var(--clr-muted); margin-bottom:0.8rem;">The people behind the pages.</p>
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="avatar">🌱</div>
+      <h4>Elara Finch</h4>
+      <div class="role">Editor &amp; heirloom hunter</div>
+      <p style="font-size:0.9rem; margin-top:0.4rem;">Elara has spent the last decade tracking down rare seeds in the Appalachian foothills.</p>
+    </div>
+    <div class="team-card">
+      <div class="avatar">🪴</div>
+      <h4>Dr. Mira Thorne</h4>
+      <div class="role">Soil ecologist</div>
+      <p style="font-size:0.9rem; margin-top:0.4rem;">Mira studies mycorrhizal networks and teaches regenerative agriculture at the university.</p>
+    </div>
+    <div class="team-card">
+      <div class="avatar">🐝</div>
+      <h4>Sam Rivera</h4>
+      <div class="role">Pollinator specialist</div>
+      <p style="font-size:0.9rem; margin-top:0.4rem;">Sam designs native‑plant corridors and keeps a rooftop apiary in the city.</p>
+    </div>
+    <div class="team-card">
+      <div class="avatar">📚</div>
+      <h4>June Kim</h4>
+      <div class="role">Managing editor</div>
+      <p style="font-size:0.9rem; margin-top:0.4rem;">June brings a poet’s eye to garden writing and ensures every story finds its root.</p>
+    </div>
+  </div>
+
+  <!-- TIMELINE / HISTORY -->
+  <h2>Our timeline</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="year">2021</div>
+      <p>First newsletter sent to 47 subscribers — a love letter to heirloom tomatoes.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2022</div>
+      <p>Launched the Seed Library project, sharing over 200 packets of rare varieties.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2023</div>
+      <p>Expanded into soil science and pollinator ecology; partnered with native plant nurseries.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2025</div>
+      <p>Published our first field guide: <em>Heirlooms of the Southern Mountains</em>.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2026</div>
+      <p>This website — a digital almanac for the curious gardener. 🌱</p>
+    </div>
+  </div>
+
+  <!-- QUOTE / INVITATION -->
+  <div style="background: var(--clr-surface); padding: 2rem 2.5rem; border-radius: 4px; margin: 2rem 0 1rem; border-left: 6px solid var(--clr-accent);">
+    <p style="font-size:1.3rem; font-family:'EB Garamond',serif; font-style:italic; color:var(--clr-primary);">“To garden is to believe in tomorrow — and to honor the hands that came before.”</p>
+    <p style="margin-top:0.4rem; color:var(--clr-muted);">— from the Uncharted Garden manifesto</p>
+  </div>
+
+  <!-- INTERNAL LINK (like main) -->
+  <div style="margin: 2rem 0; background: #f4efe7; padding: 1.2rem 2rem; border-radius: 4px; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center;">
+    <span style="font-weight:500;">🌿 Explore our <a href="#" style="border-bottom:2px solid var(--clr-accent);">complete field guide</a> to heirloom vegetables</span>
+    <span><a href="#">Read the full archive →</a></span>
+  </div>
+
+</main>
+
+<!-- ====== FOOTER (same as main) ====== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 style="font-family:'EB Garamond',serif; font-size:1.6rem;">🌱 Uncharted Garden</h4>
+        <p style="max-width:240px; color:#d9d2c5;">Cultivating curiosity, one seed at a time. A digital almanac for the thoughtful gardener.</p>
+        <p style="margin-top:0.6rem; font-size:0.9rem;">✉️ hello@unchartedgarden.com</p>
+      </div>
+      <div>
+        <h4>Journal</h4>
+        <ul><li><a href="#">Latest</a></li><li><a href="#">Heirlooms</a></li><li><a href="#">Soil Science</a></li><li><a href="#">Pollinators</a></li></ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul><li><a href="#">Seed Library</a></li><li><a href="#">Growing Guides</a></li><li><a href="#">Glossary</a></li><li><a href="#">Bookshop</a></li></ul>
+      </div>
+      <div>
+        <h4>About</h4>
+        <ul><li><a href="#">Editorial Policy</a></li><li><a href="#">Authors</a></li><li><a href="#">Contact</a></li><li><a href="#">Privacy</a></li></ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 Uncharted Garden Paths. All rights reserved. · <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Cookie Policy</a> · <a href="#">Disclaimer</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
